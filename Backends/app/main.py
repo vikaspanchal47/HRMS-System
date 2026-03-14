@@ -8,14 +8,12 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="HRMS Lite API")
 
 origins = [
-    "https://hrms-system-frontend-git-master-vikaspanchal47s-projects.vercel.app/"
+    "*"
 ]
-
-from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
