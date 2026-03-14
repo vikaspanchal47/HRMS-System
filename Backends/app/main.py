@@ -8,7 +8,7 @@ Base.metadata.create_all(bind=engine)
 app = FastAPI(title="HRMS Lite API")
 
 origins = [
-    "http://localhost:5173"
+    "https://hrms-system-frontend-git-master-vikaspanchal47s-projects.vercel.app/"
 ]
 
 from fastapi.middleware.cors import CORSMiddleware
